@@ -114,7 +114,7 @@ const Login = (props) => {
             key="account"
             tab={intl.formatMessage({
               id: 'pages.login.accountLogin.tab',
-              defaultMessage: '账户密码登录',
+              defaultMessage: 'Account Login',
             })}
           />
           {/* <Tabs.TabPane
@@ -166,7 +166,7 @@ const Login = (props) => {
               }}
               placeholder={intl.formatMessage({
                 id: 'pages.login.password.placeholder',
-                defaultMessage: 'Password: ant.design',
+                defaultMessage: 'Password: 123',
               })}
               rules={[
                 {
