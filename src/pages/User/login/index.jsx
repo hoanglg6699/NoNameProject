@@ -36,22 +36,6 @@ const Login = (props) => {
   const [resetPasswordModalVisible, handleResetPasswordModalVisible] = useState(false);
   const [registerModalVisible, handleRegisterModalVisible] = useState(false);
 
-  // const resetPassword = () => {
-  //   // Example
-  //   // localStorage.setItem('userInfo', JSON.stringify(user));
-  //   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-
-  //   // const newUpdatedUserInfo = {
-  //   //   ...userInfo,
-  //   //   token: 'new-token-adkadjhk2h3hkhkhkh',
-  //   // };
-
-  //   // localStorage.setItem('userInfo', JSON.stringify(newUpdatedUserInfo));
-
-  //   // ==========
-  //   // window.localStorage.setItem('')
-  // };
-
   const handleResetPasswordSubmit = async (fields) => {
     const hide = message.loading(
       intl.formatMessage({
@@ -67,7 +51,7 @@ const Login = (props) => {
       //   key: fields.key,
       // });
       const resetPassword = () => {
-        window.localStorage.setItem('passwordReact', fields.newPassword)
+        window.localStorage.setItem('passwordReact', fields.newPassword);
       };
       await resetPassword();
       hide();
@@ -160,7 +144,7 @@ const Login = (props) => {
               }}
               placeholder={intl.formatMessage({
                 id: 'pages.login.username.placeholder',
-                defaultMessage: '用户名: admin or user',
+                defaultMessage: 'Username: admin or user',
               })}
               rules={[
                 {
@@ -168,7 +152,7 @@ const Login = (props) => {
                   message: (
                     <FormattedMessage
                       id="pages.login.username.required"
-                      defaultMessage="请输入用户名!"
+                      defaultMessage="Please input your username!"
                     />
                   ),
                 },
@@ -182,7 +166,7 @@ const Login = (props) => {
               }}
               placeholder={intl.formatMessage({
                 id: 'pages.login.password.placeholder',
-                defaultMessage: '密码: ant.design',
+                defaultMessage: 'Password: ant.design',
               })}
               rules={[
                 {
@@ -190,7 +174,7 @@ const Login = (props) => {
                   message: (
                     <FormattedMessage
                       id="pages.login.password.required"
-                      defaultMessage="请输入密码！"
+                      defaultMessage="Please input your password!"
                     />
                   ),
                 },
@@ -305,7 +289,7 @@ const Login = (props) => {
         </div>
       </ProForm>
       <Space className={styles.other}>
-        <FormattedMessage id="pages.login.loginWith" defaultMessage="其他登录方式" />
+        <FormattedMessage id="pages.login.loginWith" defaultMessage="Login with" />
         <GoogleOutlined className={styles.icon} />
         <FacebookOutlined className={styles.icon} />
         <GithubOutlined className={styles.icon} />
