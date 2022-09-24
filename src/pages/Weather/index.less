@@ -1,0 +1,227 @@
+@import '~antd/es/style/themes/default.less';
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --yellow: #f5c32c;
+    --orange: #fca61f;
+    --black: #000;
+    --gray: rgba(32, 45, 73, 0.65);
+    --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+    --hrColor: #cfcdcd;
+    --cardColor: rgba(255, 255, 255, 0.64);
+    --buttonBg: linear-gradient(98.63deg, #4caefe 0%, #226fae 100%);
+    --inputColor: rgba(40, 52, 62, 0.07);
+    --photo: #4C8256;
+    --video: #EF5757;
+    --location: #be58b7;
+    --shedule: #E1AE4A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #efefef 0%, #e0dddd 50%);
+}
+
+.blur {
+    position: absolute;
+    top: -50%;
+    width: 17rem;
+    height: 14rem;   
+    border-radius: 50%;
+    filter: blur(72px); 
+    background: #a6ddf0;
+    // margin-top: 170px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    padding: 3% 3%;
+    border-radius: 1rem;
+}
+
+.formContainer {
+    background: url(./asset/img/lakeBackground.jpg) no-repeat;
+    background-size: cover;
+    z-index: 100;
+    border-radius: 1rem;
+    box-shadow: var(--profileShadow);
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.infoContainer {
+    background: var(--cardColor);
+    box-shadow: var(--profileShadow);
+    z-index: 100;
+    border-radius: 1rem;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+    background: linear-gradient(#ececec, #011a1b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.city {
+    display: inline-flex;
+}
+
+.city > svg {
+    margin-right: 10px;
+    height: 20px;
+}
+
+.city > p {
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo, 
+.city {
+    background-color: var(--cardColor);
+    padding: 2% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.search hr {
+    border-bottom: 3px solid #fff;
+    width: 35%;
+}
+
+.searchBar {
+    display: flex;
+    width: 100%;
+    padding: 0% 20%;
+}
+
+.searchBar input{
+    background-color: var(--cardColor);
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.SIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(106.23deg, #a4b7b1, #095f62 100%);
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: all 0.5 ease;
+
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(106.23deg, #226fae, #226fae 100%);
+        transform: scale(1.05);
+    }
+}
+
+.infoContainer {
+    padding-left: 5%;
+}
+
+.noData {
+    margin-top: 20px;
+    color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-top: 3rem;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--cardColor);
+    box-shadow: var(--profileShadow);
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+
+
