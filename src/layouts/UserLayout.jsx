@@ -1,4 +1,4 @@
-import { DefaultFooter, getMenuData, getPageTitle } from '@ant-design/pro-layout';
+import { getMenuData, getPageTitle } from '@ant-design/pro-layout';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, SelectLang, useIntl, connect, FormattedMessage } from 'umi';
 import React from 'react';
@@ -50,7 +50,7 @@ const UserLayout = (props) => {
             <div className={styles.desc}>
               <FormattedMessage
                 id="pages.layouts.userLayout.title"
-                defaultMessage="Ant Design 是西湖区最具影响力的 Web 设计规范"
+                defaultMessage="Website developed by Ly Gia Hoang"
               />
             </div>
           </div>
