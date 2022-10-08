@@ -3,20 +3,21 @@ import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 import { Card, Typography, Alert } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { useIntl } from 'umi';
+
 export default () => {
   const intl = useIntl();
   return (
     <PageHeaderWrapper
       content={intl.formatMessage({
         id: 'pages.admin.subPage.title',
-        defaultMessage: ' 这个页面只有 admin 权限才能查看',
+        defaultMessage: 'This page can only be viewed by Admin',
       })}
     >
       <Card>
         <Alert
           message={intl.formatMessage({
             id: 'pages.welcome.alertMessage',
-            defaultMessage: '更快更强的重型组件，已经发布。',
+            defaultMessage: 'Welcome to my project.',
           })}
           type="success"
           showIcon
