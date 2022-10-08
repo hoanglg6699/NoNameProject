@@ -90,6 +90,7 @@ const Login = (props) => {
       localStorage.getItem('passwordReact') == values.password
     ) {
       await setTimeout(2000);
+      localStorage.setItem('antd-pro-authority', 'user')
       history.push('/welcome');
     } else {
       const { dispatch } = props;
