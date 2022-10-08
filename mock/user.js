@@ -6,10 +6,14 @@ const waitTime = (time = 100) => {
   });
 };
 
-async function getFakeCaptcha(req, res) {
-  await waitTime(2000);
-  return res.json('captcha-xxx');
-} // 代码中会兼容本地 service mock 以及部署站点的静态数据
+// const account = {
+//   username: `${localStorage.getItem('usernameReact')}`,
+//   password: `${localStorage.getItem('passwordReact')}`,
+// };
+// {
+//   username: 'hoanglg',
+//   password: '123',
+// };
 
 export default {
   // 支持值为 Object 和 Array
@@ -18,51 +22,51 @@ export default {
     // name: localStorage.getItem('fullname'),
     avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
     userid: '00000001',
-    email: 'antdesign@alipay.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁集团－某某某事业群－某某平台部－某某技术部－UED',
+    email: 'hoanglg6699@gmail.com',
+    signature: 'The sea is full of rivers, and there is tolerance is great',
+    title: 'NoNameProject',
+    group: 'Private',
     tags: [
       {
         key: '0',
-        label: '很有想法的',
+        label: 'Very thoughtful',
       },
       {
         key: '1',
-        label: '专注设计',
+        label: 'Focus on design',
       },
       {
         key: '2',
-        label: '辣~',
+        label: 'Spicy~',
       },
       {
         key: '3',
-        label: '大长腿',
+        label: 'Big long legs',
       },
       {
         key: '4',
-        label: '川妹子',
+        label: 'Long hair',
       },
       {
         key: '5',
-        label: '海纳百川',
+        label: 'Hundreds of rivers',
       },
     ],
     notifyCount: 12,
     unreadCount: 11,
-    country: 'China',
+    country: 'VN',
     geographic: {
       province: {
-        label: '浙江省',
+        label: 'D.1',
         key: '330000',
       },
       city: {
-        label: '杭州市',
+        label: 'HCMC',
         key: '330100',
       },
     },
-    address: '西湖区工专路 77 号',
-    phone: '0752-268888888',
+    address: 'Nguyen Hue',
+    phone: '0938932440',
   },
   // GET POST 可省略
   'GET /api/users': [
@@ -87,10 +91,6 @@ export default {
   ],
   'POST /api/login/account': async (req, res) => {
     const { password, userName, type } = req.body;
-    // const un = window.localStorage.getItem('usernameReact');
-    // const pw = window.localStorage.getItem('passwordReact');
-    // const myAccounts = localStorage.getItem('myAccounts');
-    // const jsonMyAccounts = JSON.parse(myAccounts);
 
     await waitTime(2000);
 
@@ -103,7 +103,12 @@ export default {
       return;
     }
 
-    if (password === '123' && userName === 'user') {
+    if (
+      password === '123' &&
+      userName === 'user'
+      // ||
+      // (password == account.password && userName == account.username)
+    ) {
       res.send({
         status: 'ok',
         type,
@@ -112,12 +117,7 @@ export default {
       return;
     }
 
-    // if (
-    //   // password === window.localStorage.getItem('usernameReact') &&
-    //   // userName === window.localStorage.getItem('passwordReact')
-    //   password == localStorage.getItem('passwordReact') &&
-    //   userName == localStorage.getItem('usernameReact')
-    // ) {
+    // if (password == account.password && userName == account.username) {
     //   res.send({
     //     status: 'ok',
     //     type,
@@ -125,15 +125,6 @@ export default {
     //   });
     //   return;
     // }
-
-    if (type === 'mobile') {
-      res.send({
-        status: 'ok',
-        type,
-        currentAuthority: 'admin',
-      });
-      return;
-    }
 
     res.send({
       status: 'error',
@@ -183,5 +174,4 @@ export default {
       path: '/base/category/list',
     });
   },
-  'GET  /api/login/captcha': getFakeCaptcha,
 };
