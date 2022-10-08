@@ -23,42 +23,51 @@ const GlobalHeaderRight = (props) => {
 
   const intl = useIntl();
 
-
   return (
     <div className={className}>
       <HeaderSearch
-      // id='pages.search'
+        // id='pages.search'
         className={`${styles.action} ${styles.search}`}
         placeholder={intl.formatMessage({
           id: 'pages.headersearch.placeholder',
           defaultMessage: 'Search',
         })}
-        defaultValue="umi ui"
+        defaultValue=""
         options={[
           {
-            // label: <a href="https://umijs.org/zh/guide/umi-ui.html">umi ui</a>,
-            value: 'umi ui',
+            label: (
+              <a href="https://hoanglg6699.github.io/lgh.github.io/ShopeeClone/" target="__blank">
+                ShopeeClone - HTML, CSS
+              </a>
+            ),
+            value: 'ShopeeClone - HTML, CSS',
           },
           {
-            // label: <a href="next.ant.design">Ant Design</a>,
-            value: 'Ant Design',
+            label: (
+              <a href="https://hoanglg6699.github.io/lgh.github.io/MusicPlayer/" target="__blank">
+                MusicPlayer - HTML, CSS, JavaScript
+              </a>
+            ),
+            value: 'MusicPlayer - HTML, CSS, JavaScript',
           },
-          {
-            // label: <a href="https://protable.ant.design/">Pro Table</a>,
-            value: 'Pro Table',
-          },
-          {
-            // label: <a href="https://prolayout.ant.design/">Pro Layout</a>,
-            value: 'Pro Layout',
-          },
+          // {
+          // label: <a href="https://protable.ant.design/">Pro Table</a>,
+          //   value: 'Pro Table',
+          // },
+          // {
+          //   label: <a href="https://prolayout.ant.design/">Pro Layout</a>,
+          //   value: 'Pro Layout',
+          // },
         ]} // onSearch={value => {
         //   //console.log('input', value);
         // }}
       />
-      <Tooltip title={intl.formatMessage({
+      <Tooltip
+        title={intl.formatMessage({
           id: 'pages.headersearch.tooltip',
           defaultMessage: 'Working with documents',
-        })}>
+        })}
+      >
         <a
           style={{
             color: 'inherit',
