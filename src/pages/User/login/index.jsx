@@ -92,13 +92,14 @@ const Login = (props) => {
       await setTimeout(2000);
       localStorage.setItem('antd-pro-authority', 'user')
       history.push('/welcome');
-    } else {
-      const { dispatch } = props;
-      dispatch({
-        type: 'login/login',
-        payload: { ...values, type },
-      });
-    }
+    } 
+    // else {
+    //   const { dispatch } = props;
+    //   dispatch({
+    //     type: 'login/login',
+    //     payload: { ...values, type },
+    //   });
+    // }
   };
 
   return (
