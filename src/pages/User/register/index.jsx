@@ -1,5 +1,5 @@
 import { Button, Form, Input, Modal } from 'antd';
-import ProForm from '@ant-design/pro-form';
+import ProForm, { ModalForm } from '@ant-design/pro-form';
 import { useIntl, FormattedMessage } from 'umi';
 import { useState, useRef, useEffect } from 'react';
 import styles from './index.less';
@@ -224,7 +224,19 @@ const Register = (props) => {
       visible={registerModalVisible}
       footer={null}
       maskClosable={false}
+      // onVisibleChange={handleRegisterModalVisible}
       onCancel={handleCancel}
+      // onFinish={async (value) => {
+      //   const success = await handleAdd(value);
+
+      //   if (success) {
+      //     handleModalVisible(false);
+
+      //     if (actionRef.current) {
+      //       actionRef.current.reload();
+      //     }
+      //   }
+      // }}
     >
       {/* Username */}
       <FormItem
@@ -243,6 +255,15 @@ const Register = (props) => {
             }),
           },
         ]}
+        // 
+        // name="username"
+        // prefix={<UserOutlined style={{ fontSize: 20, color: '#1890FF' }} />}
+        // className={styles.input}
+        // // onChange={(e) => setUsername(e.target.value) && usernameRef.current.input.focus()}
+        //   placeholder={intl.formatMessage({
+        //     id: 'pages.login.registerAccount.usernamePlaceholder',
+        //     defaultMessage: 'Username',
+        //   })}
       >
         <Input
           ref={usernameRef}

@@ -39,22 +39,6 @@ const UpdateForm = (props) => {
   const [newPassword, setNewPassword] = useState();
   const [confirmNewPassword, setConfirmNewPassword] = useState();
 
-  const resetPassword = () => {
-    // Example
-    // localStorage.setItem('userInfo', JSON.stringify(user));
-    // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-
-    // const newUpdatedUserInfo = {
-    //   ...userInfo,
-    //   token: 'new-token-adkadjhk2h3hkhkhkh',
-    // };
-
-    // localStorage.setItem('userInfo', JSON.stringify(newUpdatedUserInfo));
-
-    // ==========
-    window.localStorage.setItem('passwordReact', newPassword);
-  };
-
   const forward = () => setCurrentStep(currentStep + 1);
 
   const backward = () => setCurrentStep(currentStep - 1);
@@ -92,6 +76,14 @@ const UpdateForm = (props) => {
     if (currentStep === 2) {
       return (
         <>
+          <FormItem 
+            label={intl.formatMessage({
+              id: 'pages.login.resetPassword.username',
+              defaultMessage: 'Username',
+            })}
+          >
+            <Input disabled defaultValue={localStorage.getItem('usernameReact')} />
+          </FormItem>
           <FormItem
             name="newPassword"
             label={intl.formatMessage({
