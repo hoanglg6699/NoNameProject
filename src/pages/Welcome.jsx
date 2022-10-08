@@ -2,15 +2,6 @@ import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import { Card, Alert, Typography } from 'antd';
 import { useIntl, FormattedMessage } from 'umi';
-import styles from './Welcome.less';
-
-const CodePreview = ({ children }) => (
-  <pre className={styles.pre}>
-    <code>
-      <Typography.Text copyable>{children}</Typography.Text>
-    </code>
-  </pre>
-);
 
 export default () => {
   const intl = useIntl();
@@ -20,7 +11,7 @@ export default () => {
         <Alert
           message={intl.formatMessage({
             id: 'pages.welcome.alertMessage',
-            defaultMessage: '更快更强的重型组件，已经发布。',
+            defaultMessage: 'Welcome to my project',
           })}
           type="success"
           showIcon
@@ -31,32 +22,62 @@ export default () => {
           }}
         />
         <Typography.Text strong>
-          <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="高级表格" />{' '}
+          <FormattedMessage
+            id="pages.welcome.shopeeClone"
+            defaultMessage="ShopeeClone - HTML, CSS"
+          />
+          {' - '}
           <a
-            href="https://procomponents.ant.design/components/table"
+            href="https://github.com/hoanglg6699/lgh.github.io/tree/main/ShopeeClone"
             rel="noopener noreferrer"
             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="欢迎使用" />
+            <FormattedMessage id="pages.welcome.link" defaultMessage="Source Code" />
           </a>
         </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-table</CodePreview>
+        <br />
+        <br />
+        <a
+          href="https://hoanglg6699.github.io/lgh.github.io/ShopeeClone/"
+          rel="noopener noreferrer"
+          target="__blank"
+        >
+          Website: ShopeeClone
+        </a>
+        <br />
+        <br />
+        <br />
         <Typography.Text
           strong
           style={{
             marginBottom: 12,
           }}
         >
-          <FormattedMessage id="pages.welcome.advancedLayout" defaultMessage="高级布局" />{' '}
+          <FormattedMessage
+            id="pages.welcome.musicPlayer"
+            defaultMessage="MusicPlayer - HTML, CSS, JavaScript"
+          />
+          {' - '}
           <a
-            href="https://procomponents.ant.design/components/layout"
+            href="https://github.com/hoanglg6699/lgh.github.io/tree/main/MusicPlayer"
             rel="noopener noreferrer"
             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="欢迎使用" />
+            <FormattedMessage id="pages.welcome.link" defaultMessage="Source Code" />
           </a>
         </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-layout</CodePreview>
+        <br />
+        <br />
+        <a
+          href="https://hoanglg6699.github.io/lgh.github.io/MusicPlayer/"
+          rel="noopener noreferrer"
+          target="__blank"
+        >
+          Website: MusicPlayer
+        </a>
+        <br />
+        <br />
+        <br />
       </Card>
     </PageContainer>
   );
