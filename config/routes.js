@@ -69,12 +69,12 @@ export default [
                 path: '/list',
                 component: './TableList',
               },
-              {
-                path: '/accounts',
-                name: 'accounts',
-                icon: 'TeamOutlined',
-                component: './Account',
-              },
+              // {
+              //   path: '/accounts',
+              //   name: 'accounts',
+              //   icon: 'TeamOutlined',
+              //   component: './Account',
+              // },
               {
                 name: 'music-player',
                 icon: 'PlayCircleOutlined',
@@ -104,12 +104,12 @@ export default [
                 icon: 'UserOutlined',
                 component: './Profile',
               },
-              {
-                path: '/cv',
-                name: 'cv',
-                icon: 'AuditOutlined',
-                component: './CV',
-              },
+              // {
+              //   path: '/cv',
+              //   name: 'cv',
+              //   icon: 'AuditOutlined',
+              //   component: './CV',
+              // },
               {
                 component: './404',
               },
